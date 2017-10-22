@@ -10,4 +10,6 @@ public interface MainMvpPresenter<T extends MainMvpView> extends MVPBasePresente
     String getEmailId();
 
     void performLogOut();
+
+    void addHomeFragment();
 }

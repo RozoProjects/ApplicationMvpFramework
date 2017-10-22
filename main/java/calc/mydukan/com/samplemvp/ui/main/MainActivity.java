@@ -10,6 +10,7 @@ import android.widget.TextView;
 import calc.mydukan.com.samplemvp.BaseApplication.BaseApplication;
 import calc.mydukan.com.samplemvp.R;
 import calc.mydukan.com.samplemvp.data.DataManager;
+import calc.mydukan.com.samplemvp.ui.Home.HomeFragment;
 import calc.mydukan.com.samplemvp.ui.base.BaseActivity;
 import calc.mydukan.com.samplemvp.ui.splash.SplashScreenActivity;
 
@@ -37,6 +38,7 @@ public class MainActivity extends BaseActivity implements MainMvpView {
             }
         });
 
+        mainMvpPresenter.addHomeFragment();
 
 
     }
@@ -54,7 +56,11 @@ public class MainActivity extends BaseActivity implements MainMvpView {
     }
 
     @Override
-    public void addHomeFragment() {
+    public void showHomeFragment() {
+        getSupportFragmentManager()
+                .beginTransaction()
+                .add(R.id.lyt_countainer, HomeFragment.newInstance(), HomeFragment.TAG)
+                .commit();
 
     }
 

@@ -23,4 +23,9 @@ public class MainPresenter<T extends MainMvpView> extends BasePresenter<T> imple
         getDataManager().clear();
         getMvpView().logOutAndOpenSplashScreen();
     }
+
+    @Override
+    public void addHomeFragment() {
+        getMvpView().showHomeFragment();
+    }
 }

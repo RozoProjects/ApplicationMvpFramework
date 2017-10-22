@@ -10,5 +10,5 @@ public interface MainMvpView extends MVPView {
 
     void logOutAndOpenSplashScreen();
 
-    void addHomeFragment();
+    void showHomeFragment();
 }
